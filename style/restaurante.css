@@ -1,0 +1,384 @@
+/* Id usado para agregar propriedades a toda área que guarda o conteúdo das receitas.*/
+#content-receitas {
+  background-image: url(../image/recipes-background3.jpg);
+  background-size: contain;
+  background-position-x: center;
+  background-repeat: round;
+  min-height: 125vh;
+  width: 100%;
+  overflow: hidden;
+}
+#content-receitas > p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  margin: 20px;
+  text-shadow: solid 3px rgb(0, 0, 0);
+}
+/* usado para fazer as imagens das receitas ocuparem todo o espaço da div sem perder qualidade */
+#content-receitas img {
+  min-width: 100%;
+  max-width: 100%;
+  display: block;
+  transition: 0.45s;
+}
+/* Pseudo-elemento usado para colocar linhas brancas acima e abaixo do paragrafo escrito "Categoria", acima da pagina. */
+#content-receitas > p::before,
+#content-receitas > p::after {
+  content: "";
+  display: block;
+  border-bottom: solid 3px rgb(0, 0, 0);
+  height: 3px;
+  margin: 0 auto;
+  width: 210px;
+  background-color: white;
+}
+/* Id usado para dividir em duas telas, uma para o conteúdo da aba bovino e outra tela para aba suino.*/
+#report-receitas {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 100%);
+  transition: 1s;
+}
+/* Usado para ocultar os inputs*/
+.chooses-input {
+  display: none;
+}
+/* div que guarda os botões de seleção das carnes */
+.navigation-meats {
+  display: flex;
+  justify-content: space-between;
+  max-width: 425px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+/* label que são os botões das carnes */
+.meat-button {
+  display: block;
+  min-width: 185px;
+  height: fit-content;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: solid 3px rgba(255, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 5px;
+  color: whitesmoke;
+  background-color: rgb(0, 0, 0);
+  transition: 0.8s;
+}
+.meat-button:hover {
+  transform: scale(1.1);
+  border: solid 3px red;
+  cursor: pointer;
+}
+/* divs que guardam os cards com as receitas, tanto bovino quanto suino*/
+.bovino,
+.suino {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 1500px;
+  margin: 0px auto;
+  padding-top: 30px;
+  transition: 0.6s;
+}
+/* div que guarda o conteudo dos cards*/
+.card-receitas {
+  position: relative;
+  display: flex;
+  margin: 20px 15px;
+  border-radius: 50px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.6s;
+  background-color: whitesmoke;
+}
+/* Usado para introduzir conteudo logo atrás da imagem, dando
+efeito de página sendo folheada ao manter mouse em cima */
+.card-sheet {
+  display: inline;
+  position: absolute;
+  right: 3px;
+  font-weight: bolder;
+  font-size: 14px;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0);
+}
+.card-receitas:hover {
+  cursor: pointer;
+  border-top-right-radius: 0px;
+  bottom: 5px;
+}
+.card-receitas:hover > img {
+  border-top-right-radius: 100px;
+  perspective: 0;
+}
+/* usado para dar caracteristicas aos paragrafos que acompanham
+as imagens dos pratos, com seus respectivos nomes. */
+.card-receitas > .card-tag {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  font-family: fantasy, sans-serif;
+  font-size: 26px;
+  color: white;
+  text-shadow: 2px 2px 1px black;
+  background-color: rgba(255, 0, 0, 0.5);
+  transition: 0.6s;
+}
+.card-receitas:hover .card-tag {
+  font-size: 30px;
+  background-color: red;
+}
+.card-receitas:hover > .card-sheet {
+  color: black;
+}
+/* Usado para armazenas o conteudo das receitas*/
+/* Classes com prefixo/sufixo recipe referem-se a aba que exibe a receita quando solicitado*/
+.recipes {
+  position: fixed;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  font-family: cursive, sans-serif;
+  min-height: 100%;
+  /* max-height: 100vh; */
+  width: 100%;
+  background-color: black;
+  transition: 0.6s;
+  opacity: 0;
+}
+/* Imagem da aba da receita*/
+.recipe-image {
+  position: relative;
+  display: flex;
+}
+/* Paragrafo "retornar a página anterior" */
+.recipe-image > p {
+  position: absolute;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 5px;
+  height: fit-content;
+  width: fit-content;
+  font-weight: bold;
+  transition: 0.6s;
+  z-index: 2;
+}
+.recipe-image:hover {
+  transition: 0.6s;
+  cursor: pointer;
+  transform: scale(0.98);
+  filter: grayscale(35%);
+}
+.recipe-image:hover > p {
+  background-color: red;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 2px 2px 20px red;
+}
+/* Usado para que ao chamar a div recipes,
+mostre apenas o conteudo da respectiva receita requisitada.
+Também formata a aba que efetivamente exibe a receita. */
+.choose-recipe {
+  display: grid;
+  min-width: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1.2fr;
+  background-color: black;
+  max-height: 100vh;
+}
+.recipe-ingredientes {
+  font-family: cursive, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: red;
+  border: solid 2.5px black;
+  border-radius: 20px;
+}
+.recipe-ingredientes > img {
+  width: 80%;
+}
+/* Dá as caracteristicas ao texto "Ingredientes" */
+.recipe-ingredientes > p:nth-child(2) {
+  font-size: 32px;
+  background-image: radial-gradient(#fff, gray);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  align-self: center;
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 8;
+}
+.recipe-ingredientes::before > p:nth-child(2) {
+  content: "";
+  width: 1000px;
+  height: 10px;
+  background-color: white;
+}
+/* Alinha as imagens das espátulas na aba ingredientes*/
+.recipe-ingredientes > img:nth-child(3) {
+  grid-column: 9;
+}
+.recipe-ingredientes-list {
+  padding: 15px;
+  margin-right: -5px;
+  max-height: 100%;
+  background-color: rgb(255, 255, 255);
+  grid-column-start: 1;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 10;
+}
+.recipe-ingredientes-list > table {
+  width: 80%;
+  margin: auto;
+}
+.recipe-ingredientes-list > table th {
+  text-align: left;
+  font-weight: normal;
+}
+.recipe-ingredientes-list > table th > b {
+  font-size: 30px;
+  border-bottom: solid 2px black;
+  text-align: left;
+}
+/* Organiza o fundo da aba que descreve a receita. */
+.recipe-briefing-background {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: white;
+  border: solid 2.5px black;
+  background-image: url(../image/chefe.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+}
+/* Resumo da receita */
+.recipe-briefing {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.92);
+}
+.recipe-briefing > h1 {
+  text-align: center;
+  font-size: 26px;
+}
+.recipe-briefing > h1::after {
+  content: "";
+  height: 6px;
+  width: 500px;
+  border-radius: 30px;
+  /* border-bottom: solid 5px #a00; */
+  display: block;
+  background-image: radial-gradient(red, #a00);
+  margin: 0 auto;
+}
+/* Paragrafo que contém a receita. */
+.recipe-orientation {
+  margin: 20px auto;
+  font-size: 21px;
+  max-width: 80%;
+}
+
+/*============== Efeitos ===============*/
+/* Botão bovino selecionado = exibe aba bovino */
+#meat-bovino:checked ~ #report-receitas {
+  left: 0;
+}
+#meat-bovino:checked ~ #report-receitas > .bovino {
+  display: grid;
+}
+/* Botão suino selecionado = exibe aba suino */
+#meat-suino:checked ~ #report-receitas {
+  left: -100%;
+}
+#meat-suino:checked ~ #report-receitas > .suino {
+  display: grid;
+}
+/* Marca o botão .meat-button de acordo com a aba selecionada. */
+#meat-bovino:checked ~ .navigation-meats > #button-bovino,
+#meat-suino:checked ~ .navigation-meats > #button-suino {
+  border: solid 3px red;
+  transition-delay: 0.3s;
+  box-shadow: 3px 3px 10px red;
+  font-weight: bold;
+}
+/* Efeito grayscale + desfocar*/
+.navigation-meats:active ~ #report-receitas > .bovino,
+.navigation-meats:active ~ #report-receitas > .suino {
+  filter: grayscale(50%) blur(13px);
+}
+
+/* =====Animações das receitas===== */
+#recipe-1,
+#recipe-2,
+#recipe-3,
+#recipe-4,
+#recipe-5,
+#recipe-6,
+#recipe-7,
+#recipe-8,
+#recipe-9 {
+  display: none;
+}
+/* Chama a aba .recipe ao solicitar de qualquer uma das receitas */
+#recipe1:checked ~ #report-receitas > .recipes,
+#recipe2:checked ~ #report-receitas > .recipes,
+#recipe3:checked ~ #report-receitas > .recipes,
+#recipe4:checked ~ #report-receitas > .recipes,
+#recipe5:checked ~ #report-receitas > .recipes,
+#recipe6:checked ~ #report-receitas > .recipes,
+#recipe7:checked ~ #report-receitas > .recipes,
+#recipe8:checked ~ #report-receitas > .recipes,
+#recipe9:checked ~ #report-receitas > .recipes {
+  left: 50%;
+  opacity: 1;
+}
+/* Torna visível apenas a receita selecionada na aba .recipe requisitada. */
+#recipe1:checked ~ #report-receitas > .recipes > #recipe-1 {
+  display: grid;
+}
+#recipe2:checked ~ #report-receitas > .recipes > #recipe-2 {
+  display: grid;
+}
+#recipe3:checked ~ #report-receitas > .recipes > #recipe-3 {
+  display: grid;
+}
+#recipe4:checked ~ #report-receitas > .recipes > #recipe-4 {
+  display: grid;
+}
+#recipe5:checked ~ #report-receitas > .recipes > #recipe-5 {
+  display: grid;
+}
+#recipe6:checked ~ #report-receitas > .recipes > #recipe-6 {
+  display: grid;
+}
+#recipe7:checked ~ #report-receitas > .recipes > #recipe-7 {
+  display: grid;
+}
+#recipe8:checked ~ #report-receitas > .recipes > #recipe-8 {
+  display: grid;
+}
+#recipe9:checked ~ #report-receitas > .recipes > #recipe-9 {
+  display: grid;
+}
+/* --- */
+@media only screen and (max-width: 1250px) {
+  #content-receitas {
+    min-height: fit-content;
+  }
+}

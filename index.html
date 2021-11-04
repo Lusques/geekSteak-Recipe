@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/pattern.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="style/restaurante.css">
+    <title>Geek Steak</title>
+</head>
+
+<body>
+    <!-- Informação geral Menu -->
+    <nav>
+        <!-- Responsivo -->
+        <input type="checkbox" id="check">
+
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <!-- Responsivo -->
+
+        <!-- Seção Menu -->
+        <img class="company" src="image/giphy.gif" alt="">
+        <ul class="tes">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="card-tag">Cardápio</a></li>
+            <li><a href="#">Receitas</a></li>
+            <li><a href="#">Unidades</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <!-- Fim Seção Menu -->
+    </nav>
+    <!-- Fim Informação geral menu -->
+
+    <main id="content-receitas">
+        <input type="radio" name="choose-meat" id="meat-bovino" class="chooses-input" checked>
+        <input type="radio" name="choose-meat" id="meat-suino" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe1" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe2" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe3" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe4" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe5" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe6" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe7" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe8" class="chooses-input">
+        <input type="checkbox" name="recipe-select" id="recipe9" class="chooses-input">
+        <p>Categoria</p>
+        <div class="navigation-meats">
+            <label for="meat-bovino" id="button-bovino" class="meat-button">
+                <p>Bovino</p>
+            </label>
+            <label for="meat-suino" id="button-suino" class="meat-button">
+                <p>Suino</p>
+            </label>
+        </div>
+        <section id="report-receitas">
+            <div class="bovino">
+                <label for="recipe1" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+                    <img src="image/card1_picanha.jpeg" alt="#">
+                    <p class="card-tag">Rump Steak</p>
+                </label>
+                <label for="recipe2" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+
+                    <img src="image/receita-card2.jpg" alt="#">
+                    <p class="card-tag">Sholder steak</p>
+                </label>
+                <label for="recipe3" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+
+                    <img src="image/receita-card3.jpg" alt="#">
+                    <p class="card-tag">Baby beef</p>
+                </label>
+                <label for="recipe4" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+
+                    <img src="image/receita-card4.jpg" alt="#">
+                    <p class="card-tag">Costela bovina</p>
+                </label>
+                <label for="recipe5" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+
+                    <img src="image/receita-card5.jpg" alt="#">
+                    <p class="card-tag">Brisket defumado</p>
+                </label>
+                <label for="recipe6" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+
+                    <img src="image/receita-card6.jpg" alt="#">
+                    <p class="card-tag">Beef rib</p>
+                </label>
+            </div>
+            <div class="suino">
+                <label for="recipe7" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+                    <img src="image/receita-card7.jpg" alt="#">
+                    <p class="card-tag">Panceta suina</p>
+                </label>
+                <label for="recipe8" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+                    <img src="image/receita-card8.jpg" alt="#">
+                    <p class="card-tag">Costela suina</p>
+                </label>
+                <label for="recipe9" class="card-receitas">
+                    <p class="card-sheet">Receita:</p>
+                    <img src="image/receita-card9.jpg" alt="#">
+                    <p class="card-tag">Lombinho suino</p>
+                </label>
+
+            </div>
+            <section class="recipes">
+
+                <div id="recipe-1" class="choose-recipe">
+                    <label for="recipe1" class="recipe-image">
+                        <img src="image/card1_picanha.jpeg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Picanha bovina</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>Alho</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Salpique a carne com um sal médio (sal grosso batido no pilão), nunca use sal fino em churrasco. Não esfregue a carne no sal e nem passe o sal na carne. Apenas salpique o sal. A parte, faça um molho de óleo com alho socado. Passe a carne neste molho e escorra antes de levá-la para a brasa. Ao virar a carne, volte a salpicá-la e coloque um pouco do molho (sem que escorra muito para o braseiro). Dê preferência faça o churrasco em uma grelha, para não furar a carne. Assim ela não perde o sangue e não fica ressecada na hora de cortar. Para saber se a carne já está macia use a parte lateral do garfo ou a parte sem corte da faca. Não fure a carne, pois ela perde o sangue e resseca (vire-a com a lateral da faca ou uma espátula própria). Dica: Acompanhe arroz branco e uma salada verde.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="recipe-2" class="choose-recipe">
+                    <label for="recipe2" class="recipe-image">
+                        <img src="image/receita-card2.jpg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Bife bovino</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>pimenta</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Salpique a carne com um sal grosso. Não esfregue a carne no sal e nem passe o sal na carne. Apenas salpique o sal. A parte, faça um molho de óleo com alho socado. Passe a carne neste molho e escorra antes de levá-la para a brasa. Ao virar a carne, volte a salpicá-la e coloque um pouco do molho (sem que escorra muito para o braseiro). Dê preferência faça o churrasco em uma grelha, para não furar a carne. Assim ela não perde o sangue e não fica ressecada na hora de cortar. Para saber se a carne já está macia use a parte lateral do garfo ou a parte sem corte da faca. Não fure a carne, pois ela perde o sangue e resseca (vire-a com a lateral da faca ou uma espátula própria).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="recipe-3" class="choose-recipe">
+                    <label for="recipe3" class="recipe-image">
+                        <img src="image/receita-card3.jpg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Baby beef</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>Alho</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Salpique a carne com um sal grosso. Não esfregue a carne no sal e nem passe o sal na carne. Apenas salpique o sal. A parte, faça um molho de óleo com alho socado. Passe a carne neste molho e escorra antes de levá-la para a brasa. Ao virar a carne, volte a salpicá-la e coloque um pouco do molho (sem que escorra muito para o braseiro). Dê preferência faça o churrasco em uma grelha, para não furar a carne. Assim ela não perde o sangue e não fica ressecada na hora de cortar. Para saber se a carne já está macia use a parte lateral do garfo ou a parte sem corte da faca. Não fure a carne, pois ela perde o sangue e resseca (vire-a com a lateral da faca ou uma espátula própria).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="recipe-4" class="choose-recipe">
+                    <label for="recipe4" class="recipe-image">
+                        <img src="image/receita-card4.jpg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Picanha bovina</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>Alho</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Salpique a carne com um sal grosso. Não esfregue a carne no sal e nem passe o sal na carne. Apenas salpique o sal. A parte, faça um molho de óleo com alho socado. Passe a carne neste molho e escorra antes de levá-la para a brasa. Ao virar a carne, volte a salpicá-la e coloque um pouco do molho (sem que escorra muito para o braseiro). Dê preferência faça o churrasco em uma grelha, para não furar a carne. Assim ela não perde o sangue e não fica ressecada na hora de cortar. Para saber se a carne já está macia use a parte lateral do garfo ou a parte sem corte da faca. Não fure a carne, pois ela perde o sangue e resseca (vire-a com a lateral da faca ou uma espátula própria).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="recipe-5" class="choose-recipe">
+                    <label for="recipe5" class="recipe-image">
+                        <img src="image/receita-card5.jpg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Brisket</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>Alho</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Em um recipiente, misture o sal, a pimenta, o açúcar, e o cominho. Esfregue essa mistura de temperos por toda a carne.
+                                Lembrando que essa é nossa sugestão de temperos, mas você pode usar aquilo que mais lhe agradar. Opções são páprica e alecrim, por exemplo.
+                                Se puder deixar descansado da noite para o dia, após esfregar o tempero por toda a carne, enrole em filme-plástico e leve à geladeira. Caso contrário, vá direto para o próximo passo.
+                                Coloque a peça de carne em uma forma de alumínio, daquelas descartáveis que geralmente usamos para assar o peru no Natal. Adicione a cerveja e leve à churrasqueira.
+                                E aqui está o truque: a temperatura do carvão deve estar baixa e a carne deverá assar indiretamente, isto é, não deve ser colocada sobre o fogo ou a brasa. Além disso, para defumar a carne, você deverá soltar algumas lascas de madeira sobre a brasa; ao queimar, essa madeira irá soltar a fumaça que deixará o brisket com um sabor especial.
+                                A cada hora, adicione um pouco mais de carvão e lenha na churrasqueira, nada extravagante, apenas o suficiente para manter o fogo aceso e a defumação da carne. Além disso, também é uma boa ideia regar a carne de vez em quando com o líquido que se formará na forma de alumínio.
+                                Asse a carne entre 6 a 8 horas. Ela estará pronta quando estiver desfiando na sua mão, aí você deve retirar do fogo, deixá-la descansar por 15 minutos e então fatiar
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="recipe-6" class="choose-recipe">
+                    <label for="recipe6" class="recipe-image">
+                        <img src="image/receita-card6.jpg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Beef rib</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>Alho</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Salpique a carne com um sal grosso. Não esfregue a carne no sal e nem passe o sal na carne. Apenas salpique o sal. A parte, faça um molho de óleo com alho socado. Passe a carne neste molho e escorra antes de levá-la para a brasa. Ao virar a carne, volte a salpicá-la e coloque um pouco do molho (sem que escorra muito para o braseiro). Dê preferência faça o churrasco em uma grelha, para não furar a carne. Assim ela não perde o sangue e não fica ressecada na hora de cortar. Para saber se a carne já está macia use a parte lateral do garfo ou a parte sem corte da faca. Não fure a carne, pois ela perde o sangue e resseca (vire-a com a lateral da faca ou uma espátula própria).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="recipe-7" class="choose-recipe">
+                    <label for="recipe7" class="recipe-image">
+                        <img src="image/receita-card7.jpg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Panceta suina</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>Alho</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Salpique a carne com um sal grosso. Não esfregue a carne no sal e nem passe o sal na carne. Apenas salpique o sal. A parte, faça um molho de óleo com alho socado. Passe a carne neste molho e escorra antes de levá-la para a brasa. Ao virar a carne, volte a salpicá-la e coloque um pouco do molho (sem que escorra muito para o braseiro). Dê preferência faça o churrasco em uma grelha, para não furar a carne. Assim ela não perde o sangue e não fica ressecada na hora de cortar. Para saber se a carne já está macia use a parte lateral do garfo ou a parte sem corte da faca. Não fure a carne, pois ela perde o sangue e resseca (vire-a com a lateral da faca ou uma espátula própria).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="recipe-8" class="choose-recipe">
+                    <label for="recipe8" class="recipe-image">
+                        <img src="image/receita-card8.jpg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Costela suina</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>Alho</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Salpique a carne com um sal grosso. Não esfregue a carne no sal e nem passe o sal na carne. Apenas salpique o sal. A parte, faça um molho de óleo com alho socado. Passe a carne neste molho e escorra antes de levá-la para a brasa. Ao virar a carne, volte a salpicá-la e coloque um pouco do molho (sem que escorra muito para o braseiro). Dê preferência faça o churrasco em uma grelha, para não furar a carne. Assim ela não perde o sangue e não fica ressecada na hora de cortar. Para saber se a carne já está macia use a parte lateral do garfo ou a parte sem corte da faca. Não fure a carne, pois ela perde o sangue e resseca (vire-a com a lateral da faca ou uma espátula própria).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="recipe-9" class="choose-recipe">
+                    <label for="recipe9" class="recipe-image">
+                        <img src="image/receita-card9.jpg">
+                        <p>Retornar a página anterior</p>
+                    </label>
+                    <div class="recipe-ingredientes">
+                        <img src="image/talheres.png" alt="">
+                        <p>Ingredientes</p>
+                        <img src="image/talheres.png" alt="">
+                        <div class="recipe-ingredientes-list">
+                            <table>
+                                <tr>
+                                    <th><b>Condimento</b></th>
+                                    <th><b>Quantidade</b></th>
+                                </tr>
+                                <tr>
+                                    <td>Lombo suino</td>
+                                    <td>1 unidade</td>
+                                </tr>
+                                <tr>
+                                    <td>Alho</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <tr>
+                                    <td>Sal</td>
+                                    <td>a gosto</td>
+                                </tr>
+                                <th></th>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="recipe-briefing-background">
+                        <div class="recipe-briefing">
+                            <h1>Modo de preparo</h1>
+                            <p class="recipe-orientation">
+                                Salpique a carne com um sal grosso. Não esfregue a carne no sal e nem passe o sal na carne. Apenas salpique o sal. A parte, faça um molho de óleo com alho socado. Passe a carne neste molho e escorra antes de levá-la para a brasa. Ao virar a carne, volte a salpicá-la e coloque um pouco do molho (sem que escorra muito para o braseiro). Dê preferência faça o churrasco em uma grelha, para não furar a carne. Assim ela não perde o sangue e não fica ressecada na hora de cortar. Para saber se a carne já está macia use a parte lateral do garfo ou a parte sem corte da faca. Não fure a carne, pois ela perde o sangue e resseca (vire-a com a lateral da faca ou uma espátula própria).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Contato</h4>
+
+                    <p><a class="no-click" href="#">(11) 8921-9999</a></p>
+                    <p><a class="no-click" href="#">contato@geek.com</a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Horários</h4>
+
+                    <p><a class="no-click" href="#">Segunda - Sexta</a></p>
+                    <p><a class="no-click" href="#">12:00 - 20:00</a></p>
+                    <p><a class="no-click" href="#">Sábado</a></p>
+                    <p><a class="no-click" href="#">12:00 - 00:00</a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Informações</h4>
+                    <p><a class="no-click" href="#">CNPJ</a></p>
+                    <p><a class="no-click" href="#">14.380.201/0001-21</a></p>
+                    <p><a class="no-click" href="#">CEP</a></p>
+                    <p><a class="no-click" href="#">06.020.901</a></p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Redes sociais</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="-blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="-blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="-blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+
+</html>
